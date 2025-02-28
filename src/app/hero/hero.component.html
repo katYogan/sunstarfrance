@@ -1,10 +1,10 @@
-<div class="bg-black mb-16" [id]="hero.id">
+<div class="katheader mb-16 lr:mt-[112px] md:mt-[80px] h-[540px] pt-[90px]" [id]="hero.id">
   
-  <div class="grid grid-flow-col grid-rows-2 md:grid-rows-1 md:grid-cols-2 lg:gap-0 sm:pt-[75px] sm:gap-[30px] md:pt-[75px] lg:pt-0">
+  <div class="sm:pt-[75px] sm:gap-[30px] md:pt-[75px] lg:pt-0   z-10 relative">
   
     <div class="flex items-center justify-center">
       <main class="max-w-screen-xl px-4 lg:px-16">
-          <div class="text-left">
+          <div class="text-left lg:w-[50%] sm:w-[100%]">
             <h1 class="text-[#B0B0B0] lg:text-7xl md:text-5xl sm:text-4xl tracking-tight leading-10 font-extrabold sm:leading-none md:text-6xl" data-aos="flip-left" data-aos-duration="600">
               {{hero.description}}
             </h1>
@@ -24,7 +24,12 @@
         </main>
     </div>
     
-    <div class="w-full object-cover h-72 lg:w-full md:h-screen bg-cover bg-center" [ngStyle]="{'background-image': 'url(' + hero.imageUrl + ')'}"></div>
+    <!-- <div class="w-full object-cover h-72 lg:w-full md:h-screen bg-cover bg-center" [ngStyle]="{'background-image': 'url(' + hero.imageUrl + ')'}"></div> -->
     
+    </div>
+    <div class="imgBckg" *ngIf="hero.images && hero.images.length > 0">
+      <app-carousel [carousel]="heroCarousel"></app-carousel>
+    </div>
   </div>
 
+ 

@@ -36,8 +36,8 @@
 }
 
 .gallery img {
-  max-width: 250px;
-  cursor: pointer;
+  /* max-width: 250px;
+  cursor: pointer; */
 }
 
 .gallery img:hover {

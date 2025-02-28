@@ -20,6 +20,8 @@ import { LinksComponent } from './links/links.component';
 import { Links } from './models/links';
 import { FooterComponent } from './footer/footer.component';
 import { Footer } from './models/footer';
+import { CarouselComponent } from './carousel/carousel.component';
+import { Carousel } from './models/carousel';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +36,8 @@ import { Footer } from './models/footer';
     SubsectionComponent,
     FormComponent,
     LinksComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -59,6 +62,8 @@ export class AppComponent implements OnInit {
   links: Links[] = [];
 
   footer!: Footer;
+
+  carousel!: Carousel;
 
   
 
@@ -131,10 +136,17 @@ export class AppComponent implements OnInit {
         { id: "cycling", name: "Cycling" },
         { id: "climbing", name: "Climbing" },
         { id: "local-area", name: "Local area" },
-        { id: "getting-here", name: "Getting here" },
-        { id: "booking-pricing", name: "Booking / Pricing" },
+        { id: "gettinghere", name: "Getting here" },
+        { id: "booking", name: "Booking / Pricing" },
         { id: "contact", name: "Contact" },
         { id: "links", name: "Links" }
+      ],
+      [
+        "assets/img/olly/COMET-HARTLEY-AND-THE-HEART-AND-SOUL_400.jpg",
+        "assets/img/olly/ULTIMATEVERSIONM42COMP_400.jpg",
+        "assets/img/olly/M33_400.jpg",
+        "assets/img/olly/ORION-CONSTELLATION_400.jpg",
+        "assets/img/olly/COMET-HARTLEY-AND-THE-HEART-AND-SOUL_400.jpg",
       ]
     );
 

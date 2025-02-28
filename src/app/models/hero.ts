@@ -4,5 +4,6 @@ export class Hero {
                 public description: string, 
                 public imageUrl: string,
                 public urls: { id: string, name: string} [],
+                public images: string[],
                 ) {}
 }

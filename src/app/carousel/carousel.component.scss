@@ -1,0 +1,93 @@
+
+
+.katrousel {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+    width: 130%;
+    display: flex;
+    &> div > img {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+// .katrousel::before {
+//     display: block;
+//     position: absolute;
+//     z-index: 1;
+//     content: "!";
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 70vw;
+//     background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+// }
+
+.katrousel>div {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    display: inline-block;
+    background: none 50% no-repeat;
+    background-size: cover;
+    animation: slide 14s infinite;
+}
+
+
+.katrousel>div::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "!";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 350px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.katrousel>div::after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "!";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-400%);
+    }
+
+}

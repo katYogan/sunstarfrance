@@ -2,14 +2,15 @@
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" (click)="toggleMenu()">
           <span class="sr-only">Open main menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <svg class="size-8 hover:stroke-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#B0B0B0" aria-hidden="true" data-slot="icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
       </div>
       <div class="hidden ml-4 lg:flex lg:gap-x-12 items-center justify-center flex-wrap w-full">
         <a href="#" class="">
-          <img style="max-width: 100px;" [src]="navbar.logoUrl" [alt]="navbar.title">
+          <img style="max-width: 100px;" [src]="navbar.logoUrl" [alt]="navbar.title" title="Sun Star France">
+          
         </a>
           <a *ngFor="let url of navbar.urls" [href]="'#' + url.id" class="text-sm/8 font-semibold text-[#B0B0B0] hover:text-indigo-600">{{url.name}}</a>
       </div>
@@ -18,22 +19,21 @@
     <div *ngIf="isMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <img style="width: 200px;" class="" [src]="navbar.logoUrl" alt="">
+            <img style="max-width: 100px;" class="" [src]="navbar.logoUrl" alt="Sun Star France" title="Sun Star France">
           </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" (click)="toggleMenu()">
+          <span class="text-[23px] text-[#B0B0B0]">Sun Star France</span>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-[#B0B0B0] text-[23px] hover:text-indigo-600" (click)="toggleMenu()">
             <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
+            X
           </button>
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a *ngFor="let url of navbar.urls" [href]="'#' + url.id" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{url.name}}</a>
+              <a *ngFor="let url of navbar.urls" [href]="'#' + url.id" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-[#B0B0B0] hover:text-indigo-600">{{url.name}}</a>
             </div>
           </div>
         </div>

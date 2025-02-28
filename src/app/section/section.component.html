@@ -23,7 +23,7 @@
             <p class="mt-6 leading-8 lg:text-[23px] md:text-[20px] sm:text-[18px] text-gray-700" [innerHTML]="section.description"></p>
           </div>
         </div>
-        <div *ngIf="section.images && section.images.length > 0" class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div *ngIf="section.images && section.images.length > 0" class="">
           <app-slider [images]="section.images"></app-slider>
         </div>
       </div>

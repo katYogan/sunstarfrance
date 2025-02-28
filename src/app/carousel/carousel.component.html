@@ -1,0 +1,14 @@
+<!-- 
+  <carousel [itemsPerSlide]="1" [interval]="3000" [noPause]="true">
+    <ng-container *ngFor="let img of carousel.images">
+      <slide class="slide">
+        <img [src]="img" class="slideImgd-block w-100" alt="carousel image">
+      </slide>
+    </ng-container>
+  </carousel> -->
+
+<div class="katrousel">
+  <ng-container *ngFor="let img of carousel.images">
+      <div class="img" [style.background-image]="'url(' + img + ')'"></div>
+  </ng-container>
+</div>

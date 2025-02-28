@@ -1,3 +1,29 @@
 .custom-bg-black {
     background-color: black;
   }
+
+  .imgBckg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .katheader {
+    position: relative;
+  }
+  .katheader::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "!";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(130deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 120%);
+}
