@@ -1,0 +1,72 @@
+<div class="section" [id]="section.id" class="">
+  <div class="relative isolate overflow-hidden bg-white px-6 py-6 sm:py-6 lg:overflow-visible lg:px-0">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <svg class="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+        <defs>
+          <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+            <path d="M100 200V.5M.5 .5H200" fill="none" />
+          </pattern>
+        </defs>
+        <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+          <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+        </svg>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+      </svg>
+    </div>
+
+    <div *ngIf="section.images && section.images.length > 0; else noImages" class="mx-auto  gap-x-8 gap-y-16  lg:items-start lg:gap-y-10 lg:px-24" data-aos="fade-up" data-aos-duration="600">
+      <div class=" lg:mx-auto lg:w-full lg:gap-x-8 lg:px-8">
+        <div class="lg:px-4">
+          <div class="">
+            <h1 class="text-base/7 font-semibold text-indigo-600" [innerHTML]="section.title"></h1>
+            <h2 class="mt-2 lg:text-5xl md:text-4xl sm:text-3xl font-semibold tracking-tight text-pretty text-gray-900" [innerHTML]="section.subtitle"></h2>
+            <p class="mt-6 leading-8 lg:text-[23px] md:text-[20px] sm:text-[18px] text-gray-700" [innerHTML]="section.description"></p>
+          </div>
+        </div>
+        <div *ngIf="section.images && section.images.length > 0" class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <app-slider [images]="section.images"></app-slider>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noImages  data-aos="fade-up" data-aos-duration="600">
+      <div class="mx-auto lg:w-full lg:px-24">
+        <div class="lg:px-4">
+          <div class="">
+            <h1 class="text-base/7 font-semibold text-indigo-600" [innerHTML]="section.title"></h1>
+            <h2 class="mt-2 lg:text-5xl md:text-4xl sm:text-3xl font-semibold tracking-tight text-pretty text-gray-900" [innerHTML]="section.subtitle"></h2>
+            <p class="mt-6 leading-8 lg:text-[23px] md:text-[20px] sm:text-[18px] text-gray-700" [innerHTML]="section.description"></p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <div *ngIf="section.subsections"  data-aos="fade-up" data-aos-duration="600">
+      <div *ngFor="let subsection of section.subsections">
+        <app-subsection [title]="subsection.title" [subtitle]="subsection.subtitle" [description]="subsection.description" [images]="subsection.images"></app-subsection>
+      </div>
+    </div>
+
+    <div *ngFor="let item of section.components"  data-aos="fade-up" data-aos-duration="600">
+      <ng-container *ngComponentOutlet="getComponent(item.component)"></ng-container>
+    </div>
+    <div *ngFor="let link of section.links">
+      <app-links [links]="link"></app-links>
+    </div>
+  </div>
+</div>
+
+  <!-- <h1>Floating images left and right</h1>
+<div class="border dib">This is a div. 
+  
+  This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div.
+  <img class= "fl m20" src="https://66.media.tumblr.com/avatar_24f9df58c75d_128.pnj" />  
+  This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. 
+
+<div>
+
+<div class="border dib">
+  This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div.
+  <img class= "fr m20" src="https://66.media.tumblr.com/avatar_24f9df58c75d_128.pnj" />  
+  This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. This is still the same div. 
+<div> -->

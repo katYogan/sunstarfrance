@@ -1,0 +1,47 @@
+.images {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    filter: blur(1px),;
+    filter: sepia(1) blur(1px);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+  }
+
+  .image {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    display: inline-block;
+    background: none 50% no-repeat;
+    background-size: cover;
+  }
+  
+//   @keyframes slide {
+//     0%, 20% {
+//       transform: translateX(0);
+//     }
+//     25%, 45% {
+//       transform: translateX(-100%);
+//     }
+//     50%, 70% {
+//       transform: translateX(-200%);
+//     }
+//     75%, 95% {
+//       transform: translateX(-300%);
+//     }
+//     100% {
+//       transform: translateX(0);
+//     }
+//   }
+
+.border { border: 1px solid gray }
+.dib { display: inline-block }
+.fl { float: left }
+.m20 { margin: 20px }
+
+.fr { float: right }

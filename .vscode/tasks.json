@@ -37,6 +37,21 @@
           }
         }
       }
+    },
+    {
+      "label": "build:tailwind",
+      "type": "shell",
+      "command": "npm run build:tailwind",
+      "isBackground": true,
+      "problemMatcher": [],
+      "watchOptions": {
+        "watchFile": "task",
+        "watchDirectory": "task",
+        "watchIgnore": ["**/.git/**", "**/node_modules/**"]
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }

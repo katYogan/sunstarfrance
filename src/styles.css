@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.modal-dialog {
+  --bs-modal-width: 95vmin;
+}
+
+.carousel-indicators {
+  margin-bottom: 0 !important;
+}
+.carousel-indicators>button {
+  background-color: #F8E28C !important;
+}
+
+.section {
+  position: relative;
+}
+
+.boximage {
+  display: flex ;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+a {
+  color: #4f46e5;
+  cursor: pointer;
+}
